@@ -18,7 +18,7 @@ export default async function Page() {
     >
       <div className="max-w-5xl mx-auto">
         <h1 className="text-3xl font-bold text-center mb-4 text-white drop-shadow">
-          青瓦, 欢迎您访问
+          {config.name}, 欢迎您访问
         </h1>
         <div className="text-center mb-6">
           <DownloadButton officialDomains={officialDomains} redirectPath={""} />
