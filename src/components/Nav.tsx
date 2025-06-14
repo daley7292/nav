@@ -48,8 +48,6 @@ export default function Nav({ officialDomains }: NavProps) {
   }, [officialDomains]);
 
   function handleAddToFavorites() {
-    const title = document.title;
-    const url = window.location.href;
     alert("请使用 Ctrl+D 将本页加入收藏夹");
   }
   const buttonBaseClass ="inline-flex justify-center items-center w-48 px-6 py-2 rounded-full font-semibold text-white cursor-pointer";
