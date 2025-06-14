@@ -1,5 +1,5 @@
 apps:
-  - name: 9
+  - name: nav
     script: bun
     args: start
     env:
