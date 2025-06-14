@@ -52,7 +52,7 @@ export default function Nav({ officialDomains }: NavProps) {
     const url = window.location.href;
     try {
       // IE 兼容
-      // @ts-ignore
+      // @ts-expect-error
       window.external.AddFavorite(url, title);
     } catch {
       alert("请使用 Ctrl+D 将本页加入收藏夹");
