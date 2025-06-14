@@ -50,13 +50,7 @@ export default function Nav({ officialDomains }: NavProps) {
   function handleAddToFavorites() {
     const title = document.title;
     const url = window.location.href;
-    try {
-      // IE 兼容
-      // @ts-expect-error
-      window.external.AddFavorite(url, title);
-    } catch {
-      alert("请使用 Ctrl+D 将本页加入收藏夹");
-    }
+    alert("请使用 Ctrl+D 将本页加入收藏夹");
   }
   const buttonBaseClass ="inline-flex justify-center items-center w-48 px-6 py-2 rounded-full font-semibold text-white cursor-pointer";
 
