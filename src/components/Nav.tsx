@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import config from "../../config"
 interface NavProps {
   officialDomains: string[];
   redirectPath: string
@@ -17,7 +18,7 @@ export default function Nav({ officialDomains }: NavProps) {
     for (const domain of domains) {
       try {
         const res = await fetch(`https://${domain}`, {
-          method: "HEAD",
+          method: "GET",
           mode: "cors",
         });
         if (res.ok) {
@@ -60,7 +61,10 @@ export default function Nav({ officialDomains }: NavProps) {
       <div>
         <button
           onClick={handleAddToFavorites}
-          className={`${buttonBaseClass} bg-teal-600 hover:bg-teal-700`}
+          style={{
+            backgroundColor: config.theme.primaryColor,
+          }}
+          className={`${buttonBaseClass} cursor-not-allowed`}
         >
           添加到收藏夹
         </button>
@@ -95,7 +99,10 @@ export default function Nav({ officialDomains }: NavProps) {
       ) : url ? (
         <button
           onClick={() => window.open(url, "_blank", "noopener,noreferrer")}
-          className={`${buttonBaseClass} bg-teal-600 hover:bg-teal-700`}
+          style={{
+            backgroundColor: config.theme.primaryColor,
+          }}
+          className={`${buttonBaseClass} cursor-not-allowed`}
         >
           打开官网
         </button>

@@ -21,7 +21,7 @@ const config = {
   domain:"nav.bluetile.biz",
   theme:{
     backgroundImage: "url('https://stb.haitunt.org/uploads/20250609/mbozhclr408qsid3o7j.jpg')",  // 背景图片
-    primaryColor: "#0d9488",
+    primaryColor: "#0d9499",
   },
   clients: <ClientItem[]>[
     {
